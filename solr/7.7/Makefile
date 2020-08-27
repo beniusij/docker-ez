@@ -1,4 +1,7 @@
 .PHONY: build
 
 build:
-	docker build -t ez-solr:7.7 .
+	docker build -t beniusij/docker-solr-ez:7.7-latest .
+
+push:
+	docker push beniusij/docker-solr-ez
