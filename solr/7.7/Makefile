@@ -1,7 +1,8 @@
 .PHONY: build
 
 build:
-	docker build -t beniusij/docker-solr-ez:7.7-latest .
+	docker build -t ez-solr:7.7-latest .
 
-push:
-	docker push beniusij/docker-solr-ez
+tag-and-push:
+	docker tag ez-solr:7.7-latest 429776178057.dkr.ecr.eu-west-1.amazonaws.com/ez-solr:7.7-latest
+	docker push 429776178057.dkr.ecr.eu-west-1.amazonaws.com/ez-solr:7.7-latest
